@@ -68,7 +68,7 @@ let p1 = document.getElementById('p1')
 p1.addEventListener('click', function(){
 
     let cn1 = document.createElement('div')
-    cn1.innerHTML = "Usted a comprado un Kreppe simple"
+    cn1.innerHTML = "Kreppe simple"
     miCarrito.appendChild(cn1)
     }
 
@@ -80,7 +80,7 @@ let p2 = document.getElementById('p2')
 p2.addEventListener('click', function(){
 
     let cn2 = document.createElement('div')
-    cn2.innerHTML = "Usted a comprado un Kreppe doble"
+    cn2.innerHTML = "Kreppe doble"
     miCarrito.appendChild(cn2)
     
     }
@@ -94,7 +94,7 @@ let p3 = document.getElementById('p3')
 p3.addEventListener('click', function(){
 
     let cn3 = document.createElement('div')
-    cn3.innerHTML = "Usted a comprado un Kreppe triple"
+    cn3.innerHTML = "Kreppe triple"
     miCarrito.appendChild(cn3)
     
     }
@@ -108,7 +108,7 @@ let p4 = document.getElementById('b1')
 p4.addEventListener('click', function(){
 
     let cn4 = document.createElement('div')
-    cn4.innerHTML = "Usted a comprado una Caipirinha"
+    cn4.innerHTML = "Caipirinha"
    miCarrito.appendChild(cn4)
     
     }
@@ -121,7 +121,7 @@ let p5 = document.getElementById('b2')
 p5.addEventListener('click', function(){
 
     let cn5 = document.createElement('div')
-    cn5.innerHTML = "Usted a comprado un Daikiri"
+    cn5.innerHTML = "Daikiri"
     miCarrito.appendChild(cn5)
     
     }
@@ -135,7 +135,7 @@ let p6 = document.getElementById('b3')
 p6.addEventListener('click', function(){
 
     let cn6 = document.createElement('div')
-    cn6.innerHTML = "Usted a comprado un Zuko di laranja"
+    cn6.innerHTML = "Zuko di laranja"
    miCarrito.appendChild(cn6)
     
     }
