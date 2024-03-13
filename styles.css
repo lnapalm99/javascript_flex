@@ -19,22 +19,6 @@ h2 {
 }
 
 
-.container {
-    display: flex; /* Establece el contenedor como un flex container */
-}
-
-.row {
-    flex: 1; /* Cada columna ocupa una fracción igual del espacio disponible */
-    padding: 10px; /* Agrega espacio alrededor del contenido */
-    border: 1px solid #ccc; /* Agrega un borde para visualizar la columna */
-}
-
-.text {
-    background-color: #000000; /* Color de fondo para resaltar el contenido */
-    padding: 10px; /* Espacio interno alrededor del contenido */
-    border: 1px solid #fb8703; /* Borde para el contenido */
-}
-
 .carrito {
 
     color: #08b70b;
