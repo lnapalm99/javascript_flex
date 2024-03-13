@@ -1,73 +1,150 @@
-// Defino Arreglos y variables
-let pedido1, pedido2, aux1, aux2
-let menu = ['Kreppe Simple', 'Kreppe Doble', 'Kreppe Triple']
-let bebidas = ['Caipirinha', 'Cerveija', 'Daikiri']
-let preciosBebidas = [1000, 500, 1000];
-let preciosComidas = [1500, 2000, 2500];
-let precioTotal, aux3 = 0
+//Defino arreglo de productos
+
+let productos = [{id: 'p1',  nombre: "Kreppe Simple", precio : 1300 },
+{id: 'p2',  nombre: "Kreppe Doble", precio : 1800 },
+{id: 'p3',  nombre: "Kreppe Triple XL", precio : 3000 }
+]
+
+let bebidas = [{id: 'b1',  nombre: "Caipirinha", precio : 1000 },
+{id: 'b2',  nombre: "Daikiri", precio : 800 },
+{id: 'b3',  nombre: "Zuko di laranja", precio : 300 }
+]
 
 
-//Defino funciones:
 
 
-function pedidoComida()
-{
-console.log('Bienvenido a la tienda de Z!');
-alert('Bienvenido a la tienda de Z!');
 
 
-pedido1 = prompt('Que desea comer? \n 1.'+ menu[0] + ' a : $'+preciosComidas[0]+ '\n 2.' + menu[1] + ' a : $'+preciosComidas[1]+ '\n 3. '+ menu[2]+ ' a : $'+preciosComidas[2] +' ');
+//Recorrro los objetos del array y plasmo en el html
 
-//Limito las entradas a las opciones disponibles
+for (producto of productos){
 
-while (pedido1!='1' && pedido1!='2' && pedido1!='3')
-{
-alert('Por favor Ingrese un numero valido')
-pedido1 = prompt('Que desea comer? \n 1.'+ menu[0] + ' a : $'+preciosComidas[0]+ '\n 2.' + menu[1] + ' a : $'+preciosComidas[1]+ '\n 3. '+ menu[2]+ ' a : $'+preciosComidas[2] +' ');
+let contenedorProductos = document.createElement('div')
 
+contenedorProductos.innerHTML = `
+
+    <p> ID:${producto.id}<p/>
+    <p>Producto: ${producto.nombre}</p>
+    <p>precio:${producto.precio}</p> 
+    <button id="${producto.id}"> Comprar Comida!</button>
+
+`
+document.body.appendChild(contenedorProductos)
+
+    
 }
 
-alert('Usted  selecciono '+ menu[pedido1-1] + ' a : $' + preciosComidas[pedido1-1] )
-aux1 = pedido1;
 
 
+
+for (bebida of bebidas){
+
+    let contenedorBebidas = document.createElement('div')
+
+    contenedorBebidas.innerHTML = `
+    
+    <p> ID:${bebida.id}<p/>
+    <p>Producto: ${bebida.nombre}</p>
+    <p>precio:${bebida.precio}</p>  
+    <button id="${bebida.id}"> Comprar Bebida!</button>
+`
+    document.body.appendChild(contenedorBebidas)
 }
 
-function pedidoBebida()
-{
-pedido2 = prompt('Que desea beber? \n 1.'+ bebidas[0] + ' a : $'+preciosBebidas[0]+ '\n 2. ' + bebidas[1] + 'a : $'+preciosBebidas[1]+ '\n 3. '+ bebidas[2]+ 'a : $'+preciosBebidas[2] +' ');
 
-//Limito las entradas a las opciones disponibles
-while (pedido2!='1' && pedido2!='2' && pedido2!='3')
 
-{
-    alert('Por favor Ingrese un numero valido')
-    pedido2 = prompt('Que desea beber? \n 1.'+ bebidas[0] + ' a : $'+preciosBebidas[0]+ '\n 2.' + bebidas[1] + 'a : $'+preciosBebidas[1]+ '\n 3. '+ bebidas[2]+ 'a : $'+preciosBebidas[2] +' ');
+
+
+//Obtengo los elementos segun id, escucho los eventos asociados a cada boton y cargo en el contenedor del CARRITO
+let p1 = document.getElementById('p1')
+
+p1.addEventListener('click', function(){
+
+    let cn1 = document.createElement('div')
+    cn1.innerHTML = "Usted a comprado un Kreppe simple"
+    miCarrito.appendChild(cn1)
+    }
+
+
+)
+
+let p2 = document.getElementById('p2')
+
+p2.addEventListener('click', function(){
+
+    let cn2 = document.createElement('div')
+    cn2.innerHTML = "Usted a comprado un Kreppe doble"
+    miCarrito.appendChild(cn2)
+    
+    }
+
+
+)
+
+
+let p3 = document.getElementById('p3')
+
+p3.addEventListener('click', function(){
+
+    let cn3 = document.createElement('div')
+    cn3.innerHTML = "Usted a comprado un Kreppe triple"
+    miCarrito.appendChild(cn3)
+    
+    }
+
+
+)
+
+
+let p4 = document.getElementById('b1')
+
+p4.addEventListener('click', function(){
+
+    let cn4 = document.createElement('div')
+    cn4.innerHTML = "Usted a comprado una Caipirinha"
+   miCarrito.appendChild(cn4)
+    
+    }
+
+
+)
+
+let p5 = document.getElementById('b2')
+
+p5.addEventListener('click', function(){
+
+    let cn5 = document.createElement('div')
+    cn5.innerHTML = "Usted a comprado un Daikiri"
+    miCarrito.appendChild(cn5)
+    
+    }
+
+
+)
+
+
+let p6 = document.getElementById('b3')
+
+p6.addEventListener('click', function(){
+
+    let cn6 = document.createElement('div')
+    cn6.innerHTML = "Usted a comprado un Zuko di laranja"
+   miCarrito.appendChild(cn6)
+    
+    }
+
+
+)
+
+
+let miCarrito = document.getElementById('carrito')
+
+
+function limpiarContenedor() {
+    // Obtén una referencia al contenedor
+    var contenedor = document.getElementById("carrito");
+    
+    // Limpia el contenido del contenedor
+    contenedor.innerHTML = "";
+
 }
-
-alert('Usted  selecciono '+ bebidas[pedido2-1] + ' a : $' + preciosBebidas[pedido2-1] )
-aux2 = pedido2;
-
-}
-
-function Cobrar()
-{
-precioTotal = preciosComidas[aux1-1] + preciosBebidas[aux2-1];
-aux3 = precioTotal
-alert('El precio total es de: $' + precioTotal);
-
-}
-
-function Saludar()
-{
-alert('GRACIAS POR ELEJIR LOS KREPPES DE Z!!! AYY QUE DELICIA!!!')
-
-}
-
-//Invoco funciones 
-pedidoComida()
-pedidoBebida()
-Cobrar()
-Saludar()
-
-
