@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    color: rgb(196, 199, 21);
+    font-family: "Big Shoulders Display";
+    font-weight: 600;
+    margin: 0px;
+  }
+
+
+  h1 {
+    color: #f30505;
+    font-size: xx-large;
+    font-style: oblique;
+}
+h2 {
+    color: #08b70b;
+    font-size: xx-large;
+    font-style: oblique;
+}
+
+
+.container {
+    display: flex; /* Establece el contenedor como un flex container */
+}
+
+.row {
+    flex: 1; /* Cada columna ocupa una fracción igual del espacio disponible */
+    padding: 10px; /* Agrega espacio alrededor del contenido */
+    border: 1px solid #ccc; /* Agrega un borde para visualizar la columna */
+}
+
+.text {
+    background-color: #000000; /* Color de fondo para resaltar el contenido */
+    padding: 10px; /* Espacio interno alrededor del contenido */
+    border: 1px solid #fb8703; /* Borde para el contenido */
+}
+
+.carrito {
+
+    color: #08b70b;
+    font-size: medium;
+    font-style: oblique;
+}
