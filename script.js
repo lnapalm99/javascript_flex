@@ -1,3 +1,10 @@
+//Saludo
+function Saludar()
+{
+alert('Bienvenido a la Tienda de Z! Haga click en los botones para llenar el carrito')
+
+}
+
 //Defino arreglo de productos
 
 let productos = [{id: 'p1',  nombre: "Kreppe Simple", precio : 1300 },
@@ -148,3 +155,5 @@ function limpiarContenedor() {
     contenedor.innerHTML = "";
 
 }
+
+Saludar()
